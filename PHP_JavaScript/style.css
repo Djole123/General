@@ -1,0 +1,202 @@
+body{
+    background-color: lightblue; /* Colors the background light blue for every page */
+}
+
+#title{ /* id tag for the title */
+    background-color: darkblue; /* Makes the color of the title dark blue */
+	border-radius: 5px; /* makes the corners less sharp */
+    color: white; /* colors the text white */
+    padding: 10px 15px; /* effectively changes the size of the title box*/
+    text-align: center; /* aligns the text in the center */
+    display: inline-block; /* effectively floats the box and helps avoid wrapping issues */
+	margin-left: 40%; /* changes left margins */
+	margin-right: 40%; /* changes right margins */
+}
+
+#loginout{ /* id tag for the login and out redirect screens */
+    background-color: darkblue; /* Makes the color of the title dark blue */
+	border-radius: 5px; /* makes the corners less sharp */
+    color: white; /* colors the text white */
+    padding: 10px 15px; /* effectively changes the size of the title box*/
+    text-align: center; /* aligns the text in the center */
+    display: inline-block; /* effectively floats the box and helps avoid wrapping issues */
+}
+
+main.home, main.sample, footer{ /* changes margins for the home, sample and footer div tags*/
+	margin-left: 20%;
+	margin-right: 20%;
+	margin-top: 5%;
+}
+
+main.map{ /* changes the margins for the map page */
+	margin-left: 15%;
+	margin-right: 15%;
+	margin-top: 3%
+}
+
+main.login{ /* changes the margins for the login page */
+	margin-left: 42.5%;
+	margin-right: 42.5%;
+	margin-top: 5%;
+}
+
+main.add{ /* changes the margins for the add sightings page */
+	margin-left: 35%;
+	margin-right: 35%;
+	margin-top: 5%
+}
+
+#jfk{ /* changes the width and height of the left hand side picture on the home page */
+	width: 300px;
+	height: 225px;
+}
+
+#west{ /* changes the width and height of the right hand side picture on the home page */
+	width: 350px;
+	height: 225px;
+	float: right; /* moves the picture to be on the right hand side of the margins */
+}
+
+#disclaimer{ /* styling the little disclaimer at the bottom of the home page */
+	margin-top: 8%;
+	color: red; /* coloring the text red */
+	font-size: 10px; /* making thefont size smaller than normal */
+}
+
+#actualMap{ /* styling the map */
+	width: 100%; /* having the map span the entire width of the margins */
+	height: 490px; /* and having it be 490 pixels tall */
+}
+
+table{ /* styling for the table */
+    color: white; /* colors the text white */
+    border-collapse: collapse; /* collapses the borders into a single border */
+    width: 100%;
+}
+
+td, th{ /* styling for the table elements */
+    border: 1px solid darkblue; /* styles the border of the elements */
+    text-align: center;
+    padding: 8px;
+}
+
+tr:nth-child(even){ /* changes the styling for every even numbered element of the table */
+	color: black; /* changes the text color to black */
+    background-color: lightblue; /* changes the background colorto light blue */
+}
+
+tr:nth-child(odd){ /* changes the styling for every odd numbered element of the table */
+	background-color: blue;
+}
+
+input.register, input.login{ /* Changes the styling for the register and login buttons */
+	background-color: blue; /* make the background color of the button blue */
+	border-radius: 10px; /* makes the borders of the buttons softer */
+	color: white; /* makes the text on the inside white */
+	padding:10px 15px; /* effectively changes the size of the button */
+	text-align: center; /* aligns the text to be in the middle of the button */
+	display: inline-block;
+}
+
+input.reset{ /* changes the styling for the reset buttons */
+	float: right; /* floats the button to the right side of the margins */
+	background-color: blue;
+	border-radius: 10px;
+	color: white;
+	padding:10px 15px;
+	text-align: center;
+	display: inline-block;
+}
+
+input.search{ /* Changes the styling for the search bar in the navigational menu */
+	cursor: pointer; /* makes the cursor a pointer when hovering over the search bar */
+    width: 130px; /* sets a fixed width of 130 pixels */
+	float: right;
+    box-sizing: border-box; /* Sets default sizing for the box */
+    border: 2px solid #ccc; /* styles the borders */
+    border-radius: 10px;
+    font-size: 12px;
+    background-color: white;
+    background-repeat: no-repeat; /* not letting the background image repeat */
+    padding: 12px 10px 12px 10px;
+    -webkit-transition: width 0.4s ease-in-out; /* creates an ease-in-out transition */
+    transition: width 0.4s ease-in-out;
+}
+
+input.search:focus{ /* styles the search bar when it is expanded */
+	cursor: auto;
+    width: 30%; /* expand it to 30% of the margins */
+}
+
+a.default:link, a.default:visited{
+	background-color: blue;
+	border-radius: 0px;
+	color: white;
+	padding: 0px 0px;
+	text-align: center;
+	display: inline-block;
+}
+
+a:link, a:visited{ /* styles the links on the page */
+    background-color: blue;
+	border-radius: 10px;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    display: inline-block;
+}
+
+a.even:link, a.even:visited{ /* styles the links in the sample results page */
+    background-color: lightblue;
+	border-radius: 10px;
+    color: black;
+    padding: 10px 15px;
+    text-align: center;
+    display: inline-block;
+}
+
+a.default:hover, a.default:active{ /* styles the links for when they are hovered over */
+    background-color: red;
+}
+
+a:hover, a:active{ /* styles the links for when they are hovered over */
+    background-color: red;
+}
+
+a.even:hover, a.even:active{ /* styles the links for when they are hovered over on the sample results page */
+    background-color: red;
+}
+
+@media only screen and (max-width: 568px){ /* Changes the size of certain bars and removes transitions for small screens */
+	a:link, a:visited{
+		padding: 5px 7px;
+	}
+	
+	a.even:link, a.even:visited{
+		padding: 5px 7px;
+	}
+	
+	#title{
+		padding: 5px 7px;
+	}
+	
+	input.search{
+		float: none;
+		-webkit-transition: none;
+		transition: none;
+	}
+	
+	input.search:focus{
+		cursor: auto;
+		width: 130px;
+	}
+	
+	main.home, main.sample, footer, main.map, main.login, main.add{
+		margin-left: 0%;
+		margin-right: 0%;
+	}
+	
+	#west{
+		float: none;
+	}
+}
